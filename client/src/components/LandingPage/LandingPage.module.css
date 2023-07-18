@@ -1,0 +1,34 @@
+@import url('../../Stetic/Fonts/Fonts.css');
+.link{
+    text-decoration: none;
+    
+}
+.cont{
+    background-image: url('../../Stetic/Images/videogame.png');
+    background-position: center;
+    size: 125%;
+    background-repeat: no-repeat;
+    background-size: 35%;
+
+}
+
+.button{
+    margin-top: 35%;
+    width: 15rem;
+    height: 5rem;
+    border-radius: 6em;
+    font-family: "Tourney", sans-serif;
+    font-weight: bolder;
+    font-size:25px;
+    color: rgb(183, 243, 195);
+    background-color: rgb(37, 109, 61);
+    border-color: black;
+    border-width: 8px;
+    text-indent: 0;
+}
+.button:hover{
+    background-color:rgb(193, 248, 204);
+    color: rgb(50, 115, 50);
+    border-color: black;
+    cursor: pointer;
+}
