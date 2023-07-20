@@ -14,7 +14,7 @@ const Nav = () => {
   useEffect(() => {
     setDisableForm(location.pathname === "/form" ? true: false);
     setDisableHome(location.pathname === "/home"? true: false);
-    setDisableAbout(location.pathname === '/about' ? true :false)
+    setDisableAbout(location.pathname === "/about"? true :false)
   }, [location.pathname]);
 
   const handleOnClickForm= (event)=>{

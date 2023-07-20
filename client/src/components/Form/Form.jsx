@@ -25,30 +25,30 @@ const Detail = () => {
   if(loading) return(<Loader/>)
 
   return (
-    <div key='Detail container' className={style.wrapper}>
-      <h1 key='Title' className={style.name}>{detail.name}</h1>
-      <div key='details' className={style.details}>
-          <h2 key='platTittle' className={style.ArrayTittles}>Platforms</h2>
-          <div key='platCont' className={style.arrayCont}>
+    <div className={style.wrapper}>
+      <h1 className={style.name}>{detail.name}</h1>
+      <div className={style.details}>
+          <h2 className={style.ArrayTittles}>Platforms</h2>
+          <div className={style.arrayCont}>
           {
-          !Array.isArray(detail.platforms)? <p key='Platform created game' className={style.platformCread}>{detail.platforms}</p>
+          !Array.isArray(detail.platforms)? <p className={style.platformCread}>{detail.platforms}</p>
           :(detail.platforms && detail.platforms.map(({platform}) => (
             <p key={'a' + z++} value={platform.name} className={style.arrays}>{platform.name}</p>
           )))
           }
         </div>
-          <h1 key='GenresTittle' className={style.ArrayTittles}>Genres</h1>
-        <span key='GenresCont' className={style.arrayCont}>
+          <h1 className={style.ArrayTittles}>Genres</h1>
+        <span className={style.arrayCont}>
           {detail.genres && detail.genres.map(genre => (
             <p key={'a' + z++} className={style.arrays}>{genre.name}</p>
           ))}
         </span>
           <div>
-          <img key='Dimg' src={detail.image} className={style.image} alt={`Img of ${detail.name} not found`} />
-          <h1 key='DescTittle' className={style.descTittle}>Description</h1>
-          <p key='descrip' className={style.descrip}>{descripcionSinEtiq}</p>
+          <img src={detail.image} className={style.image} alt={`Img of ${detail.name} not found`} />
+          <h1 className={style.descTittle}>Description</h1>
+          <p className={style.descrip}>{descripcionSinEtiq}</p>
           </div>
-          <span key='ReleaseCont' className={style.numbCont}>
+          <span className={style.numbCont}>
           <h4 className={style.numbTittle}>Released</h4>
           <p className={style.numbers}>{detail.released}</p>
           <h4 className={style.numbTittle}>Rating</h4>

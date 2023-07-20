@@ -29,14 +29,14 @@ const Home = () =>{
     let allGenres= useSelector(state=>state.genres)  
 
     //boton para reiniciar el estado
-    const handleBack=event=>{
+    const handleBack= (event) =>{
         event.preventDefault();
         setLoading(true)
         dispatch(getGame())
         .then(()=>setLoading(false))
     }
 
-    const handleGenreFilter = (event)=>{
+    const handleGenreFilter = (event) =>{
         dispatch(filterGamesByGenre(event.target.value))
         setCurrentPage(1)
         setIndexOfFirstGame(0)
@@ -44,13 +44,13 @@ const Home = () =>{
         
 
       }
-      const handleCreatedFilter = (event)=>{
+      const handleCreatedFilter = (event) =>{
           dispatch(filterGamesByOrigin(event.target.value))
           setIndexOfFirstGame(0)
           setIndexOfLastGame(gamesPerPage)
           
         }
-        const handleOrderRanking= event=>{
+        const handleOrderRanking= (event) =>{
             dispatch(orderGamesByRating(event.target.value));
             
         }
@@ -63,7 +63,7 @@ const Home = () =>{
   //Pagina actual y juegos por pagina
 
     const [currentPage, setCurrentPage]= useState(1)
-    const gamesPerPage=15
+    const gamesPerPage= 15
      //index del ultimo juego de la pagina
     let initialLastIndex= currentPage*gamesPerPage    
     const [indexOfLastGame, setIndexOfLastGame]=useState(initialLastIndex)
@@ -114,7 +114,7 @@ const Home = () =>{
         <div className={style.wrapper}>
             <div >
                <div className={style.ordFilt}>
-                 <p className={style.conectors}>Filter: by genre</p>
+                 <p className={style.conectors}>Filter: By Genre</p>
                     <div className={style.ordNFilt}>
                        <select className={style.selects} defaultValue={'All'} onChange={handleGenreFilter}>
                           <option value="All">None</option>
@@ -141,7 +141,7 @@ const Home = () =>{
                         <option value="D">Descending Rate</option>
                       </select>            
                    </div>
-                   <p className={style.conectors}>by letters</p>
+                   <p className={style.conectors}>By Letters</p>
                    <div className={style.ordNFilt}>
                       <select className={style.selects} onChange={handleOrderLetters}>
                         <option value="None">No order</option>

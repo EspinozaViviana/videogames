@@ -24,7 +24,7 @@ const Paginate = ({handlePrev, handleNext, handleOnClick, pageNumbers, currentPa
     <div>
       <button className={style.lateralMov} value={currentPage-1} onClick={handlePrev} disabled={prevBtn}>Prev</button>
       {pageNumbers?.map(e=><button className={style.buttons} key={e} value={e} onClick={handleOnClick} disabled={currentPage===e}>{e}</button>)}
-      <button className={style.lateralMov} key='N1' value={currentPage+1}onClick={handleNext} disabled={nextBtn}>Next</button>
+      <button className={style.lateralMov} value={currentPage+1}onClick={handleNext} disabled={nextBtn}>Next</button>
     </div>
   )
 }
